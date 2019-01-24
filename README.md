@@ -123,4 +123,18 @@ docker rm temporary
 ## Configure Grafana
 
  - Head your browser to the Grafana url, e.g. `http://localhost:3000`.
- - 
+ - Login with user `admin` and your password, in the example above, that's `secret`.
+ - Add data source:
+    - Click `InfluxDB`
+       - Set `Name`: `InfluxDB - Collectd` (or whatever you like)
+       - Set `URL`: `http://influxdb:8086`
+       - Set `Database`: `_internal`
+       - Click `Save & Test`
+ - Back to `Home Dashboard`, choose `New dashboard`:
+    - Click `New dashboard`
+    - Click `Import dashboard`
+    - Paste `554` to `Grafana.com dashboard` (as an example)
+       - Set `Name`: `Host Overview` (or whatever you like)
+       - Click `change` on `Unique identifier (uid)`
+       - Choose `InfluxDB - Collectd` in `influxdb_collectd`
+       - Click `Import`
