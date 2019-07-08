@@ -1,4 +1,6 @@
-# Docker Image for Collectd
+# Docker Image for Collectd for IoT
+
+Supports only MQTT
 
 To be used with InfluxDB and Grafana, e.g. standalone:
 
